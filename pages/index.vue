@@ -24,7 +24,7 @@
 import { mapGetters } from 'vuex'
 
 import Aside from '../components/Aside'
-import PreviewBlock from '../components/PreviewBLock'
+import PreviewBlock from '../components/PreviewBlock'
 
 export default {
   components: {

@@ -60,7 +60,7 @@
         id="font-size"
         v-model="size"
         type="number"
-        class="bg-grey-light border border-grey-light rounded text-black p-1 w-auto focus:border-green focus:outline-none">
+        class="bg-grey-light border border-grey-light rounded text-black p-1 w-full focus:border-green focus:outline-none">
     </div>
 
     <div class="pr-3 w-1/2">
@@ -72,7 +72,7 @@
         id="color"
         v-model="color"
         type="text"
-        class="bg-grey-light border border-grey-light rounded text-black p-1 w-auto focus:border-green focus:outline-none">
+        class="bg-grey-light border border-grey-light rounded text-black p-1 w-full focus:border-green focus:outline-none">
     </div>
   </div>
 </template>
