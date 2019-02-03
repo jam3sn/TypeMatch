@@ -1,5 +1,12 @@
 <template>
   <div class="text-black">
+    <div class="bg-white fixed flex flex-wrap items-center text-center p-16 pin z-50 md:hidden">
+      <div>
+        <h1 class="text-3xl mb-6 w-full">Type<span class="font-light">Match</span></h1>
+        <p>We've not made this tool for mobile, so go head and check it out on your desktop!</p>
+      </div>
+    </div>
+
     <nuxt/>
   </div>
 </template>
