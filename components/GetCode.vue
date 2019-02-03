@@ -19,11 +19,29 @@ export default {
   data() {
     return {
       weights: {
+        100: 100,
+        '100italic': '100i',
+        200: 200,
+        '200italic': '200i',
+        300: 300,
+        '300italic': '300i',
         light: 300,
+        400: 400,
+        '400italic': '400i',
         regular: 400,
+        500: 500,
+        '500italic': '500i',
+        600: 600,
+        '600italic': '600i',
         'semi-bold': 600,
+        700: 700,
+        '700italic': '700i',
         bold: 700,
-        'extra-bold': 800
+        800: 800,
+        '800italic': '800i',
+        'extra-bold': 800,
+        900: 900,
+        '900italic': '900i'
       }
     }
   },
@@ -49,28 +67,39 @@ export default {
       // Get font families and variants
       blocks.forEach(block => {
         let { family, variants } = this.getFont(block.family)
+        console.log('block', block)
+        console.log('variant', variants)
 
         // Create the family
-        if (!fonts.hasOwnProperty(family)) fonts[family] = []
+        if (fonts.findIndex(obj => obj.family === family) < 0) {
+          fonts.push({ family, variants: [] })
+        }
 
-        // Add a vaiant to the family
-        if (!fonts[family].includes(variants[block.variant]))
-          fonts[family].push(this.weights[variants[block.variant]])
+        // Add a variant to the family
+        const fontId = fonts.findIndex(obj => obj.family === family)
+
+        if (
+          fontId >= 0 &&
+          !fonts[fontId].variants.includes(
+            this.weights[variants[block.variant]]
+          )
+        ) {
+          console.log('ADD')
+          fonts[fontId].variants.push(this.weights[variants[block.variant]])
+        }
       })
 
       // Loop font families and variants, building a url string: Open+Sans:300,400|ABeeZee:300
-      fonts.forEach((variants, family) => {
-        console.log('fonts')
+      fonts.forEach(font => {
+        console.log(font)
         // Family name, spaces replaced with +
-        fontString += `${family.replace(' ', '+')}`
+        fontString += `${font.family.replace(' ', '+')}`
 
         // Add variants
-        if (variants.length > 0) {
+        if (font.variants.length > 0) {
           fontString += ':'
 
-          variants.forEach(variant => {
-            fontString += `${variant},`
-          })
+          font.variants.forEach(variant => (fontString += `${variant},`))
 
           fontString = fontString.slice(0, -1)
         }
