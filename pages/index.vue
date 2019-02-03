@@ -47,7 +47,10 @@ export default {
 
       return `@font-face {
                 font-family: "${font.family}";
-                src: url(${font.files[fontVarient]}) format("truetype");
+                src: url(${font.files[fontVarient].replace(
+                  'http',
+                  'https'
+                )}) format("truetype");
               }`
     }
   }

@@ -960,6 +960,13 @@
   dependencies:
     consola "^2.0.7"
 
+"@nuxtjs/google-analytics@^2.0.0":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.0.2.tgz#75353143628fd7697b41eb5aa7da38a513394eca"
+  integrity sha512-NpDQI7w4jr93Ukh98n3d0BRDHhX7cDUi3W2E0CAU6t5wmC+Q6cwQMqcEl32tGJBQlPZYWSrBKIM0A413HpL3TA==
+  dependencies:
+    vue-analytics "^5.4.0"
+
 "@nuxtjs/opencollective@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/opencollective/-/opencollective-0.2.0.tgz#2badff33d6fd2dcd5dc5ce95e2171c8095f12d25"
@@ -7318,6 +7325,11 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
+v-clipboard@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/v-clipboard/-/v-clipboard-2.2.1.tgz#00519943312fe692acfda7cb4da11928db489c10"
+  integrity sha512-at0rawb+VbNrTIblpzKK6iDtHad0c8VvjG8aFBnEL5BSB7e/pdtWJZhpgXYaxcHW9soHlH/i7pI/sjackZHA0g==
+
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -7334,6 +7346,11 @@ vm-browserify@0.0.4:
   integrity sha1-XX6kW7755Kb/ZflUOOCofDV9WnM=
   dependencies:
     indexof "0.0.1"
+
+vue-analytics@^5.4.0:
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.2.tgz#37724aeec71bb830b1cf2d52a969cf190ef120c1"
+  integrity sha512-5JKGnVF33VHlXFREzht9z3Z11N4IA8vXNnpvYeAf72rEUyAuuU9Q9kX34bULW2CxMrahr8m06IB8+91GX0Ruag==
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"

@@ -1,7 +1,7 @@
 <template>
   <div class="border-r h-screen max-w-xs relative w-full">
     <header class="border-b p-4 text-center">
-      <h1 class="text-3xl">Type<span class="font-light">Match</span></h1>
+      <h1 class="text-3xl">TypeMatch</h1>
     </header>
 
     <section
