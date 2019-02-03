@@ -5,16 +5,17 @@
         for="font-category"
         class="block mb-2">Font Category</label>
 
-      <select
-        id="font-category"
-        v-model="category"
-        class="bg-grey-light border border-grey-light rounded text-black p-3 w-full focus:border-green focus:outline-none">
-        <option value="serif">Serif</option>
-        <option value="sans-serif">Sans Serif</option>
-        <option value="display">Display</option>
-        <option value="handwriting">Handwriting</option>
-        <option value="monospace">Monospace</option>
-      </select>
+      <div class="dropdown">
+        <select
+          id="font-category"
+          v-model="category">
+          <option value="serif">Serif</option>
+          <option value="sans-serif">Sans Serif</option>
+          <option value="display">Display</option>
+          <option value="handwriting">Handwriting</option>
+          <option value="monospace">Monospace</option>
+        </select>
+      </div>
     </div>
 
     <div class="mb-4 pl-3 w-1/2">
@@ -22,15 +23,16 @@
         for="font-family"
         class="block mb-2">Font Family</label>
 
-      <select
-        id="font-family"
-        v-model="family"
-        class="bg-grey-light border border-grey-light rounded text-black p-3 w-full focus:border-green focus:outline-none">
-        <option
-          v-for="(font, key) in fonts"
-          :key="key"
-          :value="key">{{ font.family }}</option>
-      </select>
+      <div class="dropdown">
+        <select
+          id="font-family"
+          v-model="family">
+          <option
+            v-for="(font, key) in fonts"
+            :key="key"
+            :value="key">{{ font.family }}</option>
+        </select>
+      </div>
     </div>
 
     <div
@@ -40,15 +42,16 @@
         for="font-variant"
         class="block mb-2">Font Variant</label>
 
-      <select
-        id="font-variant"
-        v-model="variant"
-        class="bg-grey-light border border-grey-light rounded text-black p-3 w-full focus:border-green focus:outline-none">
-        <option
-          v-for="(variant, key) in fonts[family].variants"
-          :key="key"
-          :value="key">{{ variant }}</option>
-      </select>
+      <div class="dropdown">
+        <select
+          id="font-variant"
+          v-model="variant">
+          <option
+            v-for="(variant, key) in fonts[family].variants"
+            :key="key"
+            :value="key">{{ variant }}</option>
+        </select>
+      </div>
     </div>
 
     <div class="mb-4 pl-3 w-1/2">
@@ -59,8 +62,7 @@
       <input
         id="font-size"
         v-model="size"
-        type="number"
-        class="bg-grey-light border border-grey-light rounded text-black p-1 w-full focus:border-green focus:outline-none">
+        type="number">
     </div>
 
     <div class="pr-3 w-1/2">
@@ -71,8 +73,7 @@
       <input
         id="color"
         v-model="color"
-        type="text"
-        class="bg-grey-light border border-grey-light rounded text-black p-1 w-full focus:border-green focus:outline-none">
+        type="text">
     </div>
   </div>
 </template>

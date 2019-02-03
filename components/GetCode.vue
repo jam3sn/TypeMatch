@@ -1,14 +1,30 @@
 <template>
   <div class="mb-8">
     <h3 class="mb-4">HTML Import</h3>
-    <code class="bg-grey-lighter border border-grey-light block text-black text-sm rounded mb-8 px-4 py-3 w-full">
-      {{ htmlCode }}
-    </code>
+
+    <div class="relative">
+      <code class="bg-grey-lighter border border-grey-light block text-black text-sm rounded mb-8 pl-4 pr-12 py-3 w-full">
+        {{ htmlCode }}
+      </code>
+
+      <button
+        v-clipboard="htmlCode"
+        class="copy-button"
+        @click="htmlCopied = true">{{ htmlCopied ? 'Copied!' : 'Copy' }}</button>
+    </div>
 
     <h3 class="mb-4">CSS Import</h3>
-    <code class="bg-grey-lighter border border-grey-light block text-black text-sm rounded px-4 py-3 w-full">
-      {{ cssCode }}
-    </code>
+
+    <div class="relative">
+      <code class="bg-grey-lighter border border-grey-light block text-black text-sm rounded pl-4 pr-12 py-3 w-full">
+        {{ cssCode }}
+      </code>
+
+      <button
+        v-clipboard="cssCode"
+        class="copy-button"
+        @click="cssCopied = true">{{ cssCopied ? 'Copied!' : 'Copy' }}</button>
+    </div>
   </div>
 </template>
 
@@ -18,6 +34,8 @@ import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
+      cssCopied: false,
+      htmlCopied: false,
       weights: {
         100: 100,
         '100italic': '100i',
@@ -55,6 +73,14 @@ export default {
 
     htmlCode() {
       return `<link href="https://fonts.googleapis.com/css?family=${this.fontUrl()}" rel="stylesheet">`
+    }
+  },
+
+  watch: {
+    cssCopied() {
+      setTimeout(() => {
+        this.cssCopied = false
+      }, 3000)
     }
   },
 

@@ -5,9 +5,9 @@
     </header>
 
     <section
-      style="top: 66px; bottom: 77px;"
+      style="top: 67px; bottom: 77px; padding-bottom: 42px;"
       class="absolute overflow-y-scroll pin">
-      <div class="border-t flex flex-wrap items-center p-8">
+      <div class="flex flex-wrap items-center p-8">
         <div class="pr-3 w-1/2">
           <label for="bg-color">Background Color</label>
         </div>
@@ -16,8 +16,7 @@
           <input
             id="bg-color"
             v-model="bgColor"
-            type="text"
-            class="bg-grey-light border border-grey-light rounded text-black p-1 w-full focus:border-green focus:outline-none">
+            type="text">
         </div>
       </div>
 
@@ -33,7 +32,21 @@
       </div>
     </section>
 
-    <section class="absolute border-t flex px-8 py-4 pin-b pin-x">
+    <div
+      style="bottom: 90px"
+      class="absolute flex justify-between items-center px-8 pin-b pin-x text-sm">
+      <p>Built with ♥ by <a
+        class="no-underline text-green"
+        href="https://twitter.com/jam3sn_">Jam3sn</a></p>
+
+      <div class="flex">
+        <a
+          class="no-underline text-black hover:text-green"
+          href="https://github.com/jam3sn/typematch">Contribute</a>
+      </div>
+    </div>
+
+    <section class="absolute border-t px-8 py-4 pin-b pin-x">
       <button
         class="bg-grey-light border border-grey-light block text-black font-bold rounded px-4 py-3 w-full focus:outline-none focus:border-green hover:bg-grey hover:border-grey"
         @click="modal = true">Get Code</button>
@@ -46,10 +59,23 @@
 
       <get-code slot="body" />
 
-      <button
-        slot="footer"
-        class="bg-grey-light border border-grey-light block text-black font-bold rounded px-4 py-3 w-full focus:outline-none focus:border-green hover:bg-grey hover:border-grey"
-        @click="modal = false" >Close</button>
+      <div slot="footer">
+        <button
+          class="bg-grey-light border border-grey-light block text-black font-bold rounded px-4 py-3 w-full focus:outline-none focus:border-green hover:bg-grey hover:border-grey"
+          @click="modal = false" >Close</button>
+
+        <div class="flex justify-between items-center mt-6 text-sm">
+          <p>Built with ♥ by <a
+            class="no-underline text-green"
+            href="https://twitter.com/jam3sn_">Jam3sn</a></p>
+
+          <div class="flex">
+            <a
+              class="no-underline text-black hover:text-green"
+              href="https://github.com/jam3sn/typematch">Contribute</a>
+          </div>
+        </div>
+      </div>
     </modal>
   </div>
 </template>

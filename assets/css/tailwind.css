@@ -11,13 +11,6 @@
  */
 @tailwind preflight;
 
-/* Stop app overwriting font preference when selecting a font */
-@font-face {
-  font-family: 'RobotoSystem';
-  font-weight: 300;
-  src: url('https://fonts.googleapis.com/css?family=Roboto:400');
-}
-
 /**
  * This injects any component classes registered by plugins.
  *
