@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    <nuxt/>
+    <nuxt class="hidden md:flex"/>
   </div>
 </template>
 
